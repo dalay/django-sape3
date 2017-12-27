@@ -1,6 +1,4 @@
 from django import template
-from django.conf import settings
-
 from sape.sape_client import sape_manager
 
 register = template.Library()
