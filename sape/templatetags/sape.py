@@ -7,7 +7,7 @@ from sape.sape_client import sape_manager
 register = template.Library()
 
 SAPE_DOMAIN = getattr(settings, 'SAPE_DOMAIN', None)
-SAPE_USER = getattr(settings, 'SAPE_USER', None)
+SAPE_USER = getattr(settings, 'SAPE_USER', 'foobar')
 SAPE_DIR = getattr(settings, 'SAPE_DIR', '.')
 
 

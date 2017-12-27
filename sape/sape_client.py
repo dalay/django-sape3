@@ -4,7 +4,6 @@ from django.conf import settings
 
 
 SAPE_URL = "http://dispenser-01.sape.ru/code.php?user=%(user_id)s&host=%(host)s&charset=%(charset)s&as_txt=true"
-CACHE_LIFETIME = 3600
 
 class SapeFetchError(Exception):
     pass
