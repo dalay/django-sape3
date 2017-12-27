@@ -1,0 +1,11 @@
+{% extends 'sape/block.html' %}
+{% block block_title %}{{ block.super }}{% endblock block_title %}
+{% block block_content %}
+    {% if links %}
+        <ul class='partner-offers'>
+            {% for link in links %}
+                <li>{{ link|safe }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock block_content %}

@@ -1,0 +1,27 @@
+from django import template
+from django.conf import settings
+from django.utils.safestring import mark_safe
+
+from sape.sape_client import sape_manager
+
+register = template.Library()
+
+SAPE_DOMAIN = getattr(settings, 'SAPE_DOMAIN', None)
+SAPE_USER = getattr(settings, 'SAPE_USER', None)
+SAPE_DIR = getattr(settings, 'SAPE_DIR', '.')
+
+
+@register.inclusion_tag('sape/links.html', takes_context=True)
+def sape_links(context, title=True):
+    request = context['request']
+    if request:
+        query_string = request.META.get('QUERY_STRING', '')
+
+        uri = ''.join([request.META["PATH_INFO"],
+                        len(query_string) and '?' or '',
+                        query_string])
+
+        links = sape_manager.get_links(uri)
+        if links:
+            return {'links': links, 'block_title': title}
+        return {'empty_block': True}
