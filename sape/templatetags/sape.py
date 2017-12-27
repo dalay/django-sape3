@@ -5,11 +5,6 @@ from sape.sape_client import sape_manager
 
 register = template.Library()
 
-SAPE_DOMAIN = getattr(settings, 'SAPE_DOMAIN', None)
-SAPE_USER = getattr(settings, 'SAPE_USER', 'foobar')
-SAPE_DIR = getattr(settings, 'SAPE_DIR', '.')
-
-
 @register.inclusion_tag('sape/links.html', takes_context=True)
 def sape_links(context, title=None):
     request = context['request']
