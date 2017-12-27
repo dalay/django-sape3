@@ -25,6 +25,8 @@ INSTALLED_APPS = (
 SAPE_DOMAIN = 'example.com'
 SAPE_USER = 'sape_username'
 # Остальные настройки
+SAPE_SHOW_CODE = False # Показывать или нет проверочный код sape
+                       # (при добавлении страниц сайте в сервис).
 SAPE_CHARSET = 'utf8' # Кодировка сайта
 SAPE_DIR = '/tmp/sape_cache/' # Где будет храниться файл,
                               # содержащий полученные с sape ссылки.
