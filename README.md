@@ -4,7 +4,11 @@
 Данное приложение ориентировано исключительно на работу с Python 3. Причиной его создания послужила работа по миграции одного "пожилого" сайта с PHP на Python. 
 
 ## Установка
+```bash
+pip install django-sape3
 ```
+или
+```bash
 pip install git+https://github.com/dalay/django-sape3.git
 ```
 ## Настройка
