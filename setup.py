@@ -1,18 +1,13 @@
+from os.path import join, dirname
 from setuptools import setup, find_packages
-import codecs
-from os import path
+import sape
 
-
-def read(*parts):
-    filename = path.join(path.dirname(__file__), *parts)
-    with codecs.open(filename, encoding='utf-8') as fp:
-        return fp.read()
 
 setup(
         name='django-sape3',
-        version='0.1',
+        version=sape.__version__,
         description='Integration of the Django framework with the sape.ru service.',
-        long_description=read('README.md'),
+        long_description=open(join(dirname(__file__), 'README.md')).read(),
         license='BSD',
         packages=find_packages(),
         author='Dalay',
