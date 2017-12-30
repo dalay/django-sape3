@@ -7,7 +7,7 @@ setup(
         name='django-sape3',
         version=sape.__version__,
         description='Integration of the Django framework with the sape.ru service.',
-        long_description=open(join(dirname(__file__), 'README.md')).read(),
+        long_description=open(join(dirname(__file__), 'README.rst')).read(),
         license='BSD',
         packages=find_packages(),
         author='Dalay',
